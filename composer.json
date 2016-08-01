@@ -1,0 +1,32 @@
+{
+  "name": "sitkoru/yii2-redis-native",
+  "description": "Yii2 redis component using native driver",
+  "keywords": [
+    "yii2",
+    "redis",
+    "active-record",
+    "cache",
+    "session"
+  ],
+  "type": "yii2-extension",
+  "license": "The MIT License (MIT)",
+  "support": {
+    "issues": "https://github.com/sitkoru/yii2-redis-native/issues",
+    "source": "https://github.com/sitkoru/yii2-redis-native"
+  },
+  "authors": [
+    {
+      "name": "George Drak",
+      "email": "sonicgd@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": ">=2.0.4",
+    "yiisoft/yii2-redis": ">=2.0.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "sitkoru\\redis\\": ""
+    }
+  }
+}
