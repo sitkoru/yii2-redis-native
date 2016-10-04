@@ -53,6 +53,17 @@ class Connection extends \yii\redis\Connection
         }
     }
 
+    public function evalCommand($name, $params)
+    {
+        $this->open();
+        array_unshift($params, $name);
+        $result = call_user_func_array([$this->_socket, 'rawCommand'], $params);
+        if ($result === false && $this->_socket->getLastError()) {
+            throw new Exception('Redis error: ' . $this->_socket->getLastError() . '\nRedis command was: ' . $name);
+        }
+        return $result;
+    }
+
     /**
      * @inheritdoc
      */
