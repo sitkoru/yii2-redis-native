@@ -21,8 +21,7 @@
     }
   ],
   "require": {
-    "yiisoft/yii2": ">=2.0.4",
-    "yiisoft/yii2-redis": ">=2.0.5"
+    "yiisoft/yii2-redis": "dev-master"
   },
   "autoload": {
     "psr-4": {
